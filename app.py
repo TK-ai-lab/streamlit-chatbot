@@ -1,3 +1,9 @@
+import openai
+import streamlit as st
+
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.organization = st.secrets["OPENAI_PROJECT_ID"]
+
 import streamlit as st
 from openai import OpenAI
 
