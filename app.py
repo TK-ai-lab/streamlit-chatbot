@@ -4,12 +4,6 @@ import streamlit as st
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 openai.organization = st.secrets["OPENAI_PROJECT_ID"]
 
-import streamlit as st
-from openai import OpenAI
-
-api_key = st.secrets["OPENAI_API_KEY"]
-project_id = st.secrets["OPENAI_PROJECT_ID"]
-
 client = OpenAI(api_key=api_key, project=project_id)
 
 st.title("パスワード付きチャットボット")
