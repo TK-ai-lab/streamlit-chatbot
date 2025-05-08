@@ -1,7 +1,7 @@
 import streamlit as st
 import openai
 
-openai.api_key = "YOUR_API_KEY"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 PASSWORD = "mypassword"
 
