@@ -1,7 +1,9 @@
 import streamlit as st
 import openai
+from openai import OpenAI
 
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+# クライアントを初期化
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 PASSWORD = "mypassword"
 
@@ -19,7 +21,7 @@ user_input = st.text_input("あなたのメッセージを入力:")
 
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-4o",
         messages=st.session_state.messages,
         max_tokens=300
