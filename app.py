@@ -14,7 +14,7 @@ if password != PASSWORD:
     st.warning("正しいパスワードを入力してください。")
     st.stop()
 
-st.title("My chatbot")
+st.title("パスワード付きチャットボット")
 
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "system", "content": "あなたは優秀なアシスタントです。"}]
