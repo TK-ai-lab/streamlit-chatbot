@@ -1,9 +1,8 @@
 import streamlit as st
 import openai
 
-# API キーとプロジェクトIDを読み込む
 openai.api_key = st.secrets["OPENAI_API_KEY"]
-openai.organization = st.secrets["OPENAI_PROJECT_ID"]
+openai.organization = st.secrets["OPENAI_ORGANIZATION_ID"]
 
 PASSWORD = "mypassword"
 
