@@ -1,8 +1,7 @@
 import streamlit as st
-import openai
 from openai import OpenAI
 
-# クライアントを初期化
+# OpenAIクライアント初期化
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 PASSWORD = "mypassword"
